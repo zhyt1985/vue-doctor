@@ -30,15 +30,15 @@
     }
   },
   "scripts": {
-    "dev": "tsdown --watch",
-    "build": "rm -rf dist && NODE_ENV=production tsdown",
+    "dev": "tsup --watch",
+    "build": "rm -rf dist && tsup",
     "typecheck": "tsc --noEmit",
     "test": "pnpm build && vitest run"
   },
   "dependencies": {
-    "commander": "^14.0.3",
+    "commander": "^11.1.0",
     "knip": "^5.83.1",
-    "ora": "^9.3.0",
+    "ora": "^7.0.1",
     "oxlint": "^1.47.0",
     "picocolors": "^1.1.1",
     "prompts": "^2.4.2",
@@ -46,7 +46,7 @@
   },
   "devDependencies": {
     "@types/prompts": "^2.4.9",
-    "tsdown": "^0.20.3",
+    "tsup": "^8.0.0",
     "vitest": "^3.0.0"
   }
 }

@@ -74,10 +74,8 @@ const RULE_CATEGORY_MAP: Record<string, string> = {
   "vue/valid-v-slot": "Correctness",
   "vue/valid-v-text": "Correctness",
 
-  // Performance
+  // Performance / Security
   "vue/no-v-html": "Security",
-  "vue/require-v-for-key": "Performance",
-  "vue/no-use-v-if-with-v-for": "Performance",
 };
 
 const RULE_HELP_MAP: Record<string, string> = {
