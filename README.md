@@ -1,5 +1,7 @@
 # vue-doctor
 
+English | [中文](./README.zh-CN.md)
+
 One command to diagnose your Vue codebase health.
 
 ```bash
