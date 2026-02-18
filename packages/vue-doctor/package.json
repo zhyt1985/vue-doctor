@@ -15,30 +15,30 @@
     "directory": "packages/vue-doctor"
   },
   "bin": {
-    "vue-doctor": "./dist/cli.js"
+    "vue-doctor": "./dist/cli.mjs"
   },
   "files": ["dist"],
   "type": "module",
   "exports": {
     ".": {
-      "types": "./dist/cli.d.ts",
-      "default": "./dist/cli.js"
+      "types": "./dist/cli.d.mts",
+      "default": "./dist/cli.mjs"
     },
     "./api": {
-      "types": "./dist/index.d.ts",
-      "default": "./dist/index.js"
+      "types": "./dist/index.d.mts",
+      "default": "./dist/index.mjs"
     }
   },
   "scripts": {
-    "dev": "tsup --watch",
-    "build": "rm -rf dist && tsup",
+    "dev": "tsdown --watch",
+    "build": "rm -rf dist && NODE_ENV=production tsdown",
     "typecheck": "tsc --noEmit",
     "test": "pnpm build && vitest run"
   },
   "dependencies": {
-    "commander": "^11.1.0",
+    "commander": "^14.0.0",
     "knip": "^5.83.1",
-    "ora": "^7.0.1",
+    "ora": "^9.3.0",
     "oxlint": "^1.47.0",
     "picocolors": "^1.1.1",
     "prompts": "^2.4.2",
@@ -46,7 +46,7 @@
   },
   "devDependencies": {
     "@types/prompts": "^2.4.9",
-    "tsup": "^8.0.0",
+    "tsdown": "^0.20.0",
     "vitest": "^3.0.0"
   }
 }
