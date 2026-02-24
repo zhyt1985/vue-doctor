@@ -9,7 +9,7 @@ npx vue-health .
 ```
 
 ```
-vue-health v0.0.1
+vue-health v2.1.0
 
   Nuxt (Vue ^3.5.0) · 128 source files
 
@@ -44,6 +44,30 @@ vue-health v0.0.1
 - **Diff mode** — only scan changed files on your branch
 - **Monorepo support** — select which workspace projects to scan
 - **Programmable** — `import { diagnose } from "vue-health/api"`
+
+## Claude Code Skill
+
+vue-health also provides a [Claude Code](https://claude.ai/code) Skill, allowing you to diagnose Vue project health directly within Claude Code.
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/zhyt1985/vue-health.git ~/vue-health
+
+# Copy the skill to Claude's global skills directory
+cp -r ~/vue-health/skills/vue-health ~/.claude/skills/
+```
+
+### Usage
+
+In Claude Code, simply ask:
+
+```
+Check the health of this Vue project
+```
+
+For more details, see [Skill Documentation](https://github.com/zhyt1985/vue-health/tree/main/skills/vue-health).
 
 ## Install
 

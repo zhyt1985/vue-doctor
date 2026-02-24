@@ -2,9 +2,9 @@ import type { Rule } from "eslint";
 
 // Patterns that indicate secrets/credentials
 const SECRET_PATTERNS = [
-  /(?:api[_-]?key|apikey)\s*[:=]\s*["'`][A-Za-z0-9_\-]{16,}/i,
-  /(?:secret|token|password|passwd|pwd)\s*[:=]\s*["'`][A-Za-z0-9_\-/.+]{8,}/i,
-  /(?:access[_-]?key|private[_-]?key)\s*[:=]\s*["'`][A-Za-z0-9_\-/.+]{16,}/i,
+  /(?:api[_-]?key|apikey)\s*[:=]\s*["'`][A-Za-z0-9_-]{16,}/i,
+  /(?:secret|token|password|passwd|pwd)\s*[:=]\s*["'`][A-Za-z0-9_/.+-]{8,}/i,
+  /(?:access[_-]?key|private[_-]?key)\s*[:=]\s*["'`][A-Za-z0-9_/.+-]{16,}/i,
   /\bsk[-_](?:live|test)[-_][A-Za-z0-9]{20,}/,  // Stripe
   /\bAIza[A-Za-z0-9_\\-]{35}/,                   // Google API
   /\bghp_[A-Za-z0-9]{36}/,                       // GitHub PAT

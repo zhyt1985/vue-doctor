@@ -221,7 +221,7 @@ export const runOxlint = async (
   }
 };
 
-const createOxlintConfig = (framework: Framework) => {
+const createOxlintConfig = (_framework: Framework) => {
   const rules: Record<string, "warn" | "error"> = {
     // Vue essential rules
     "no-dupe-keys": "error",

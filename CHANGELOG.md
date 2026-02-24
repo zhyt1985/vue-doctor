@@ -1,5 +1,17 @@
 # Changelog
 
+## 2.1.0 (2026-02-24)
+
+### 新增功能
+
+- **Claude Code Skill**：新增 Claude Code 集成支持，允许在 Claude Code 中直接诊断 Vue 项目健康
+- **文档更新**：在主 README 中添加 Claude Code Skill 安装和使用说明
+
+### 文档变更
+
+- 根目录 README.md 和 README.zh-CN.md 新增 "Claude Code Skill" 章节
+- 示例输出中的版本号更新为 v2.1.0
+
 ## 2.0.0 (2026-02-20)
 
 ### 重大变更

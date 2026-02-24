@@ -10,7 +10,7 @@ import { logger } from "./utils/logger.js";
 import { prompts } from "./utils/prompts.js";
 import { selectProjects } from "./utils/select-projects.js";
 
-const VERSION = process.env.VERSION ?? "2.0.0";
+const VERSION = process.env.VERSION ?? "2.1.0";
 
 interface CliFlags {
   lint: boolean;

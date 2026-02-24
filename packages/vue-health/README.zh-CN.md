@@ -9,7 +9,7 @@ npx vue-health .
 ```
 
 ```
-vue-health v0.0.1
+vue-health v2.1.0
 
   Nuxt (Vue ^3.5.0) · 128 source files
 
@@ -44,6 +44,30 @@ vue-health v0.0.1
 - **Diff 模式** — 仅扫描当前分支变更的文件，适合 CI/PR 场景
 - **Monorepo 支持** — 可选择扫描 workspace 中的特定项目
 - **可编程** — `import { diagnose } from "vue-health/api"`
+
+## Claude Code Skill
+
+vue-health 也提供 [Claude Code](https://claude.ai/code) Skill，允许你直接在 Claude Code 中诊断 Vue 项目健康。
+
+### 安装
+
+```bash
+# 克隆仓库
+git clone https://github.com/zhyt1985/vue-health.git ~/vue-health
+
+# 复制 skill 到 Claude 全局 skills 目录
+cp -r ~/vue-health/skills/vue-health ~/.claude/skills/
+```
+
+### 使用
+
+在 Claude Code 中直接说：
+
+```
+检查这个 Vue 项目的健康度
+```
+
+更多详情请参阅 [Skill 文档](https://github.com/zhyt1985/vue-health/tree/main/skills/vue-health)。
 
 ## 安装
 

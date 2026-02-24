@@ -1,6 +1,3 @@
-import fs from "node:fs";
-import path from "node:path";
-import type { WorkspacePackage } from "../types.js";
 import { getWorkspacePackages } from "./discover-project.js";
 import { prompts } from "./prompts.js";
 

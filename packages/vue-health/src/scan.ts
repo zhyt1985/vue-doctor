@@ -6,8 +6,6 @@ import {
   SCORE_GOOD_THRESHOLD,
   SCORE_OK_THRESHOLD,
   SEPARATOR_LENGTH_CHARS,
-  SUMMARY_BOX_HORIZONTAL_PADDING_CHARS,
-  SUMMARY_BOX_OUTER_INDENT_CHARS,
 } from "./constants.js";
 import type { Diagnostic, ScanOptions, ScoreResult } from "./types.js";
 import { calculateScore } from "./utils/calculate-score.js";
@@ -161,7 +159,7 @@ export const scan = async (
         const lintDiagnostics = await runEslint(rootDirectory, includePaths, eslintConfigFile);
         diagnostics.push(...lintDiagnostics);
         if (!scoreOnly) spinner.succeed(`Found ${lintDiagnostics.length} lint issues (deep)`);
-      } catch (error) {
+      } catch {
         if (!scoreOnly) spinner.fail("Deep analysis failed");
       }
     } else {
@@ -175,7 +173,7 @@ export const scan = async (
         );
         diagnostics.push(...lintDiagnostics);
         if (!scoreOnly) spinner.succeed(`Found ${lintDiagnostics.length} lint issues`);
-      } catch (error) {
+      } catch {
         if (!scoreOnly) spinner.fail("Lint check failed");
       }
     }
@@ -188,7 +186,7 @@ export const scan = async (
       const knipDiagnostics = await runKnip(rootDirectory);
       diagnostics.push(...knipDiagnostics);
       if (!scoreOnly) spinner.succeed(`Found ${knipDiagnostics.length} dead code issues`);
-    } catch (error) {
+    } catch {
       if (!scoreOnly) spinner.fail("Dead code detection failed");
     }
   }

@@ -22,7 +22,7 @@ const rules: Record<string, any> = {
 const plugin: ESLint.Plugin & { configs: Record<string, Linter.Config> } = {
   meta: {
     name: "eslint-plugin-vue-health",
-    version: "2.0.0",
+    version: "2.1.0",
   },
   rules,
   configs: {},
