@@ -24,7 +24,11 @@
     "vue-health": "./dist/cli.mjs"
   },
   "files": [
-    "dist"
+    "dist",
+    "README.md",
+    "README.zh-CN.md",
+    "CHANGELOG.md",
+    "LICENSE"
   ],
   "type": "module",
   "exports": {
